@@ -5,11 +5,11 @@ const router = express.Router();
 router.get("/add-product", (req, res, next) => {
   // use를 사용하면 새로운 미들웨어를 추가할 수 있음.
   res.send(
-    '<form action="/product" method="POST"><input type="text" name="title"/><button type="submit">Add Product</button></form>'
+    '<form action="/admin/add-product" method="POST"><input type="text" name="title"/><button type="submit">Add Product</button></form>'
   );
 });
 
-router.post("/product", (req, res, next) => {
+router.post("/add-product", (req, res, next) => {
   console.log(req.body);
   res.redirect("/");
 });
